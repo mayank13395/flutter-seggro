@@ -1,0 +1,4 @@
+#Tue Dec 31 18:39:16 IST 2019
+base.0=D\:\\Mayank-project\\flutter-seggro\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

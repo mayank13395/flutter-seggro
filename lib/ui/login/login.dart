@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Material _buildBody() {
     return Material(
-      child: Stack(
+      child:  Stack(
         children: <Widget>[
           OrientationBuilder(
             builder: (context, orientation) {
@@ -113,7 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
           )
         ],
       ),
-    );
+    /* add child content here */
+    
+      );
   }
 
   Widget _buildLeftSide() {
@@ -136,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              AppIconWidget(image: 'assets/icons/ic_appicon.png'),
+              
               SizedBox(height: 24.0),
               _buildUserIdField(),
               _buildPasswordField(),
@@ -195,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
           style: Theme.of(context)
               .textTheme
               .caption
-              .copyWith(color: Colors.orangeAccent),
+              .copyWith(color: Colors.lightGreen),
         ),
         onPressed: () {},
       ),
@@ -203,11 +205,13 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   Widget _buildSignInButton() {
+    
     return RoundedButtonWidget(
       buttonText: Strings.login_btn_sign_in,
-      buttonColor: Colors.orangeAccent,
+      buttonColor: Colors.green,
       textColor: Colors.white,
       onPressed: () async {
+        print("clicked");
         if (_store.canLogin) {
           _store.login();
         } else {

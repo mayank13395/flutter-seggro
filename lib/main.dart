@@ -1,4 +1,5 @@
 import 'package:boilerplate/routes.dart';
+import 'package:boilerplate/services/ask_permission.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:inject/inject.dart';
@@ -8,6 +9,7 @@ import 'constants/strings.dart';
 import 'di/components/app_component.dart';
 import 'di/modules/local_module.dart';
 import 'di/modules/netwok_module.dart';
+import 'service_locator.dart';
 import 'ui/splash/splash.dart';
 
 // global instance for app component
@@ -24,6 +26,7 @@ void main() {
   ]).then((_) async {
     appComponent = await AppComponent.create(NetworkModule(), LocalModule());
 
+    await setupLocator();
     runApp(appComponent.app);
   });
 }
@@ -33,12 +36,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+      // FlutterStatusbarcolor.setStatusBarColor(Colors.white);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.appName,
       theme: themeData,
       routes: Routes.routes,
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      home: AskForPermission(),
     );
   }
 }

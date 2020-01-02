@@ -20,8 +20,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: Center(child: AppIconWidget(image: 'assets/icons/ic_appicon.png')),
+     return Material(
+      child: Center(
+        child: AppIconWidget(image: 'assets/icons/logo.png')
+        ),
     );
   }
 
@@ -33,10 +35,13 @@ class _SplashScreenState extends State<SplashScreen> {
   navigate() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    if (preferences.getBool(Preferences.is_logged_in) ?? false) {
-      Navigator.of(context).pushReplacementNamed(Routes.home);
-    } else {
-      Navigator.of(context).pushReplacementNamed(Routes.login);
-    }
+     Navigator.of(context).pushReplacementNamed(Routes.lang);
+
+    // if (preferences.getBool(Preferences.is_logged_in) ?? false) {
+    //   Navigator.of(context).pushReplacementNamed(Routes.login);
+    // } else {
+    //   Navigator.of(context).pushReplacementNamed(Routes.home);
+    // }
   }
 }
+

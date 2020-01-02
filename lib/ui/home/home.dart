@@ -1,11 +1,16 @@
 import 'package:boilerplate/data/sharedpref/constants/preferences.dart';
 import 'package:boilerplate/routes.dart';
 import 'package:boilerplate/stores/post/post_store.dart';
+import 'package:boilerplate/ui/homebody.dart';
+import 'package:boilerplate/widgets/empty_app_bar_widget.dart';
 import 'package:boilerplate/widgets/progress_indicator_widget.dart';
+import 'package:flushbar/flushbar.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../bottomnav.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -16,104 +21,60 @@ class _HomeScreenState extends State<HomeScreen> {
   //store
   final _store = PostStore();
 
+  final List<Widget> _children = [
+    HomeBody(
+      myColor: Colors.grey,
+    ),
+    HomeBody(
+      myColor: Colors.indigo,
+    ),
+    HomeBody(
+      myColor: Colors.orange,
+    ),
+  ];
+
+  int selectedIndex =0;
+
   @override
   void initState() {
     super.initState();
+
+    print(_children);
 
     //get all posts
     _store.getPosts();
   }
 
   @override
+  void setState(fn) {
+    // TODO: implement setState
+    super.setState(fn);
+    print("okkkkk");
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _buildAppBar(context),
-      body: _buildBody(),
-    );
-  }
+      appBar: EmptyAppBar(),
+      body: _children[selectedIndex],
+      bottomNavigationBar: BottomNav(
+        callback: (val) => setState(() => {
+            print("parent"),
+            selectedIndex = val,
 
-  Widget _buildAppBar(BuildContext context) {
-    return AppBar(
-      title: Text('Posts'),
-      actions: <Widget>[
-        IconButton(
-          onPressed: () {
-            SharedPreferences.getInstance().then((preference) {
-              preference.setBool(Preferences.is_logged_in, false);
-              Navigator.of(context).pushReplacementNamed(Routes.login);
-            });
-          },
-          icon: Icon(
-            Icons.power_settings_new,
-          ),
-        )
-      ],
-    );
-  }
-
-  Widget _buildBody() {
-    return Stack(
-      children: <Widget>[
-        Observer(
-          builder: (context) {
-            return _store.loading
-                ? CustomProgressIndicatorWidget()
-                : Material(child: _buildListView());
-          },
+          print(val)
+        
+        }
         ),
-        Observer(
-          name: 'error',
-          builder: (context) {
-            return _store.success
-                ? Container()
-                : showErrorMessage(context, _store.errorStore.errorMessage);
-          },
-        )
-      ],
+      ),
     );
   }
 
-  Widget _buildListView() {
-    return _store.postsList != null
-        ? ListView.separated(
-            itemCount: _store.postsList.posts.length,
-            separatorBuilder: (context, position) {
-              return Divider();
-            },
-            itemBuilder: (context, position) {
-              return ListTile(
-                leading: Icon(Icons.cloud_circle),
-                title: Text(
-                  '${_store.postsList.posts[position].title}',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: false,
-                  style: Theme.of(context).textTheme.title,
-                ),
-                subtitle: Text(
-                  '${_store.postsList.posts[position].body}',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: false,
-                ),
-              );
-            },
-          )
-        : Center(child: Text('No posts found'));
-  }
-
-  // General Methods:-----------------------------------------------------------
-  showErrorMessage(BuildContext context, String message) {
-    Future.delayed(Duration(milliseconds: 0), () {
-      if (message != null) {
-        FlushbarHelper.createError(
-          message: message,
-          title: 'Error',
-          duration: Duration(seconds: 3),
-        )..show(context);
-      }
-    });
-
-    return Container();
+  Material _buildBody() {
+    return Material(
+      child: Container(
+        color: Colors.blueGrey,
+      ),
+    );
   }
 }
