@@ -37,7 +37,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Boilerplate Project" >
         <activity
-            android:name="com.iotecksolutions.todoapp.MainActivity"
+            android:name="com.seggro.app.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

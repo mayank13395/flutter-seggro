@@ -1,4 +1,4 @@
-package com.iotecksolutions.todoapp;
+package com.seggro.app;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

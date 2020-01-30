@@ -62,7 +62,7 @@
 37-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:19:9-44
 38        <activity
 38-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:21:9-39:20
-39            android:name="com.iotecksolutions.todoapp.MainActivity"
+39            android:name="com.seggro.app.MainActivity"
 39-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:22:13-41
 40            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
 40-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:25:13-137

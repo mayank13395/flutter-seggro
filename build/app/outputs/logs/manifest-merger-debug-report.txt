@@ -156,7 +156,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ba
 		ADDED from D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:20:9-43
 	android:name
 		ADDED from D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:18:9-57
-activity#com.iotecksolutions.todoapp.MainActivity
+activity#com.seggro.app.MainActivity
 ADDED from D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:21:9-39:20
 	android:launchMode
 		ADDED from D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:23:13-43
