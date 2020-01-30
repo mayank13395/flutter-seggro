@@ -69,6 +69,60 @@ class _LoginScreenState extends State<LoginScreen> {
     return Material(
       child:  Stack(
         children: <Widget>[
+
+                ClipRRect(
+                borderRadius: BorderRadius.only(bottomRight: Radius.circular(220.0)),
+                child: Container(
+                  color: Colors.yellow[700],
+                  height: 70.0,
+                  width: 120.0,
+                ),
+              ),
+
+              Positioned(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    ClipRRect(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(500.0),
+                  topRight: Radius.circular(400.0),
+                  ),
+                child: Container(
+                  color: Colors.green[700],
+                  height: 120.0,
+                  width: 70.0,
+                ),
+              ),
+
+
+                  ],
+                ),
+              ),
+
+              Column(
+                children: <Widget>[
+
+                  // Container(
+                  //   padding: EdgeInsets.only(top: 80),
+                  //                     child: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.center,
+                  //     children: <Widget>[
+                  //       SizedBox(
+                          
+                  //       width: 80.0,
+                  //       height: 100.0,
+                  //       child: 
+                  //       Image.asset("assets/icons/logo.png"),
+                  //     ),
+                  //     ],
+                  //   ),
+                  // ),
+
+                ],
+              ),
+
+
           OrientationBuilder(
             builder: (context, orientation) {
               //variable to hold widget

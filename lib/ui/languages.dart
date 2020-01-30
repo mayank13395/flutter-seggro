@@ -25,7 +25,7 @@ class _Language extends State<Language> {
           color: Color.fromRGBO(237, 237, 237, 1),
           // color: Colors.,
           width: 100,
-          height: 80,
+          height: 90,
           padding: EdgeInsets.all(1),
           child: Row(
             children: <Widget>[
@@ -90,7 +90,7 @@ class _Language extends State<Language> {
                     // height: 100,
                     // color: Colors.red,
                     child: Text("Select Your Language",
-                        style: TextStyle(fontSize: 18)),
+                        style: TextStyle(fontSize: 20)),
                   ),
                 ),
                 Expanded(

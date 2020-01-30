@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1098130963983",
+    "firebase_url": "https://flutter-seggro.firebaseio.com",
+    "project_id": "flutter-seggro",
+    "storage_bucket": "flutter-seggro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1098130963983:android:c9bb0077e58f85a3932d7a",
+        "android_client_info": {
+          "package_name": "com.seggro.flutterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1098130963983-ld1jsplv90njd8hk16aoavogo62hcjfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8dfOo2uEytf_cYZpi-45K_Thx1OKnoS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1098130963983-ld1jsplv90njd8hk16aoavogo62hcjfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

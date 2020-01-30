@@ -1,8 +1,12 @@
-// import 'dart:html';
+import 'dart:io';
 
 import 'package:boilerplate/services/cropdetails.dart';
+import 'package:boilerplate/services/image_service.dart';
+import 'package:boilerplate/services/weather_service.dart';
+// import 'package:boilerplate/services/image_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 import '../routes.dart';
 import 'package:image_picker/image_picker.dart';
@@ -16,16 +20,58 @@ class TakeImage extends StatefulWidget {
 }
 
 class _TakeImage extends State<TakeImage> {
-  // File _image;
-  // File
+  File _image;
+  String temp;
+//  final imageService = Provider.of<ImageService>(context);
 
-  Future getImage() async {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    temp = weatherService.temperature.toStringAsFixed(1);
+  }
+
+  Future getImageFromCamera() async {
+    //  final imageService = Provider.of<ImageService>(context);
+    print("called");
     var image = await ImagePicker.pickImage(source: ImageSource.camera);
 
     setState(() {
-      // _image = image;
+      _image = image;
       print(image);
+      CropDetails.imagePath = _image;
+      print("ssss.............................s.sssssssssss");
+      print(CropDetails.imagePath);
+      print(CropDetails.cropName);
+      print('e.......................................e.e.e.e');
+
+      if (_image != null) {
+        Navigator.of(context).pushReplacementNamed(Routes.imagedata);
+      }
     });
+  }
+
+  Future getImageFromGallery() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+
+    setState(() {
+      _image = image;
+
+      CropDetails.imagePath = _image;
+
+      // imageService.setImagePath(_image);
+
+      print("ssss.............................s.sssssssssss");
+      print(CropDetails.imagePath);
+      print(CropDetails.cropName);
+      print('e.......................................e.e.e.e');
+
+      if (_image != null) {
+        Navigator.of(context).pushReplacementNamed(Routes.imagedata);
+      }
+    });
+
+    // print("okkkkkk");
   }
 
   var background_color = Color.fromRGBO(222, 227, 224, 1);
@@ -54,6 +100,8 @@ class _TakeImage extends State<TakeImage> {
 
   @override
   Widget build(BuildContext context) {
+    // final imageService = Provider.of<ImageService>(context);
+
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
       statusBarColor: background_color1, //or set color with: Color(0xFF0000FF)
     ));
@@ -87,7 +135,7 @@ class _TakeImage extends State<TakeImage> {
             Expanded(
               flex: 2,
               child: Container(
-                  color: Colors.orange,
+                  // color: Colors.orange,
                   child: ConstrainedBox(
                       constraints:
                           const BoxConstraints(minWidth: double.infinity),
@@ -110,66 +158,60 @@ class _TakeImage extends State<TakeImage> {
             ),
             Expanded(
               flex: 4,
-              child: Card(
-                child: Container(
-                  color: Colors.green,
-                  child: ConstrainedBox(
-                    constraints:
-                        const BoxConstraints(minWidth: double.infinity),
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                            flex: 5,
-                            child: InkWell(
-                              onTap: () {
-                                print("camera selected");
-                                getImage;
-                              },
-                              child: Container(
-                                  color: Colors.white10,
-                                  child: Column(
-                                    children: <Widget>[
-                                      Expanded(
-                                        flex: 5,
-                                        child: Image.asset(
-                                            "assets/images/camera.png"),
-                                      ),
-                                      Expanded(
-                                        flex: 4,
-                                        child: Text("Camera",
-                                            style: TextStyle(fontSize: 20)),
-                                      )
-                                    ],
-                                  )),
+              child: Container(
+                // color: Colors.green,
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(minWidth: double.infinity),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                          flex: 5,
+                          child: InkWell(
+                            onTap: getImageFromCamera,
+                            child: Container(
+                                color: Colors.white10,
+                                child: Column(
+                                  children: <Widget>[
+                                    Expanded(
+                                      flex: 5,
+                                      child: Image.asset(
+                                          "assets/images/camera.png"),
+                                    ),
+                                    Expanded(
+                                      flex: 4,
+                                      child: Text("Camera",
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.green)),
+                                    )
+                                  ],
+                                )),
+                          )),
+                      Expanded(
+                          flex: 5,
+                          child: InkWell(
+                            onTap: getImageFromGallery,
+                            child: Container(
+                                // color: Colors.red,
+                                child: Column(
+                              children: <Widget>[
+                                Expanded(
+                                  flex: 5,
+                                  child:
+                                      Image.asset("assets/images/upload.png"),
+                                ),
+                                Expanded(
+                                  flex: 4,
+                                  child: Text("Gallery",
+                                      style: TextStyle(
+                                          fontSize: 20, color: Colors.green)),
+                                )
+                              ],
                             )),
-                        Expanded(
-                            flex: 5,
-                            child: InkWell(
-                              onTap: () {
-                                print("gallery selected");
-                                getImage;
-                              },
-                              child: Container(
-                                  color: Colors.red,
-                                  child: Column(
-                                    children: <Widget>[
-                                      Expanded(
-                                        flex: 5,
-                                        child: Image.asset(
-                                            "assets/images/upload.png"),
-                                      ),
-                                      Expanded(
-                                        flex: 4,
-                                        child: Text("Gallery",
-                                            style: TextStyle(fontSize: 20)),
-                                      )
-                                    ],
-                                  )),
-                            ))
-                      ],
-                    ),
-                    // child: Text("Second Block"),
+                          ))
+                    ],
                   ),
+                  // child: Text("Second Block"),
                 ),
               ),
             ),
@@ -188,11 +230,48 @@ class _TakeImage extends State<TakeImage> {
             Expanded(
               flex: 2,
               child: Container(
-                padding: EdgeInsets.only(bottom: 20),
-                color: Colors.blue,
+                padding: EdgeInsets.only(bottom: 50),
+                // color: Colors.blue,
                 child: ConstrainedBox(
                   constraints: const BoxConstraints(minWidth: double.infinity),
-                  child: Text("WEather Details.............."),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 5,
+                        child: Container(
+                        constraints: BoxConstraints.expand(height: 300),
+                        alignment: Alignment.center,
+                        child: Image.asset(
+                        "assets/images/weather.png",
+                        fit: BoxFit.cover,
+                        ),
+                        )
+                      ),
+                 
+                      Expanded(
+                        flex: 5,
+                        child: Column(
+                          children: <Widget>[
+                           Align(
+                             alignment: Alignment.centerLeft,
+                             child:  Text(temp != null ?  temp   : "temp not available"),
+                           ),
+                            Align(
+                             alignment: Alignment.centerLeft,
+                             child:     Text(weatherService.date),
+                           ),
+                            Align(
+                             alignment: Alignment.centerLeft,
+                             child:  Text(weatherService.weather),
+                           ),
+                            //  new Text('2018 \u00a9 '),
+                         
+                            
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
 
                 // child: Text("Third Block"),

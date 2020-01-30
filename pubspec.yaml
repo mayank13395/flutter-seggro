@@ -40,6 +40,15 @@ dependencies:
   #permission_handler
   permission_handler: '^4.0.0'
 
+  #FIREBASE_STORAGE
+  firebase_storage: ^3.1.1
+
+  #loader_animation
+  loading_animations: ^2.1.0
+
+  #weather api
+  weather: ^0.9.5
+
 
 # flutter_staggered_grid_view: "^0.2.7"
   # The following adds the Cupertino Icons font to your application.
@@ -51,6 +60,9 @@ dependencies:
 
   # A composable, Future-based library for making HTTP requests.
   http: ^0.12.0+2
+
+  #provider
+  # provider: ^4.0.1
 
   # The following adds the launcher icon support to your application.
   # run below mentioned commands to generate launcher icons
@@ -78,6 +90,13 @@ dependencies:
 
   # A flexible widget for user notification.
   flushbar: ^1.9.1
+
+  # create point on touch
+  positioned_tap_detector: ^1.0.3
+
+
+  # statusbar text color
+  flutter_statusbar_text_color: ^0.1.2
 
   # Dependency injection
   inject:

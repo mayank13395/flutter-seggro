@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.iotecksolutions.todoapp"
+3    package="com.seggro.flutterapp"
 4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
@@ -18,87 +18,232 @@
 16    <uses-permission android:name="android.permission.INTERNET" />
 16-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:8:5-66
 16-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:8:22-64
-17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-17-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-17-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
-18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-18-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
-18-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
-19    <!--
-20 io.flutter.app.FlutterApplication is an android.app.Application that
-21         calls FlutterMain.startInitialization(this); in its onCreate method.
-22         In most cases you can leave this as-is, but you if you want to provide
-23         additional functionality it is fine to subclass or reimplement
-24         FlutterApplication and put your custom class here.
-25    -->
-26    <application
-26-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:15:5-38:19
-27        android:name="io.flutter.app.FlutterApplication"
-27-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:16:9-57
-28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-28-->[androidx.core:core:1.1.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:24:18-86
-29        android:debuggable="true"
-30        android:icon="@mipmap/ic_launcher"
-30-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:18:9-43
-31        android:label="Boilerplate Project" >
-31-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:17:9-44
-32        <activity
-32-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:19:9-37:20
-33            android:name="com.iotecksolutions.todoapp.MainActivity"
-33-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:20:13-41
-34            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
-34-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:23:13-137
-35            android:hardwareAccelerated="true"
-35-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:24:13-47
-36            android:launchMode="singleTop"
-36-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:21:13-43
-37            android:theme="@style/LaunchTheme"
-37-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:22:13-47
-38            android:windowSoftInputMode="adjustResize" >
-38-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:25:13-55
-39
-40            <!--
-41                 This keeps the window background of the activity showing
-42                 until Flutter renders its first frame. It can be removed if
-43                 there is no splash screen (such as the default splash screen
-44                 defined in @style/LaunchTheme).
-45            -->
-46            <meta-data
-46-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:30:13-32:40
-47                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-47-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:31:17-82
-48                android:value="true" />
-48-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:32:17-37
-49
-50            <intent-filter>
-50-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:33:13-36:29
-51                <action android:name="android.intent.action.MAIN" />
-51-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:34:17-68
-51-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:34:25-66
-52
-53                <category android:name="android.intent.category.LAUNCHER" />
-53-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:35:17-76
-53-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:35:27-74
-54            </intent-filter>
-55        </activity>
-56
-57        <provider
-57-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
-58            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-58-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
-59            android:authorities="com.iotecksolutions.todoapp.flutter.image_provider"
-59-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
-60            android:exported="false"
-60-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
-61            android:grantUriPermissions="true" >
-61-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
-62            <meta-data
-62-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
-63                android:name="android.support.FILE_PROVIDER_PATHS"
-63-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
-64                android:resource="@xml/flutter_image_picker_file_paths" />
-64-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
-65        </provider>
-66    </application>
-67
-68</manifest>
+17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+17-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:10:5-79
+17-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:10:22-76
+18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+18-->[:location] D:\Mayank-project\flutter-seggro\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-81
+18-->[:location] D:\Mayank-project\flutter-seggro\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-78
+19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+19-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+20-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
+20-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+21    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+21-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:24:5-79
+21-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:24:22-76
+22    <uses-permission android:name="android.permission.WAKE_LOCK" />
+22-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:25:5-68
+22-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:25:22-65
+23    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+23-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:26:5-110
+23-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:26:22-107
+24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+24-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:26:5-82
+24-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:26:22-79
+25    <!--
+26 io.flutter.app.FlutterApplication is an android.app.Application that
+27         calls FlutterMain.startInitialization(this); in its onCreate method.
+28         In most cases you can leave this as-is, but you if you want to provide
+29         additional functionality it is fine to subclass or reimplement
+30         FlutterApplication and put your custom class here.
+31    -->
+32    <application
+32-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:17:5-40:19
+33        android:name="io.flutter.app.FlutterApplication"
+33-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:18:9-57
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.1.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\3bcafbc2e95e113b9db4402c8bff255d\core-1.1.0\AndroidManifest.xml:24:18-86
+35        android:debuggable="true"
+36        android:icon="@mipmap/ic_launcher"
+36-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:20:9-43
+37        android:label="Boilerplate Project" >
+37-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:19:9-44
+38        <activity
+38-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:21:9-39:20
+39            android:name="com.iotecksolutions.todoapp.MainActivity"
+39-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:22:13-41
+40            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+40-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:25:13-137
+41            android:hardwareAccelerated="true"
+41-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:26:13-47
+42            android:launchMode="singleTop"
+42-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:23:13-43
+43            android:theme="@style/LaunchTheme"
+43-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:24:13-47
+44            android:windowSoftInputMode="adjustResize" >
+44-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:27:13-55
+45
+46            <!--
+47                 This keeps the window background of the activity showing
+48                 until Flutter renders its first frame. It can be removed if
+49                 there is no splash screen (such as the default splash screen
+50                 defined in @style/LaunchTheme).
+51            -->
+52            <meta-data
+52-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:32:13-34:40
+53                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+53-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:33:17-82
+54                android:value="true" />
+54-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:34:17-37
+55
+56            <intent-filter>
+56-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:35:13-38:29
+57                <action android:name="android.intent.action.MAIN" />
+57-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:36:17-68
+57-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:36:25-66
+58
+59                <category android:name="android.intent.category.LAUNCHER" />
+59-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:37:17-76
+59-->D:\Mayank-project\flutter-seggro\android\app\src\main\AndroidManifest.xml:37:27-74
+60            </intent-filter>
+61        </activity>
+62
+63        <service
+63-->[:firebase_storage] D:\Mayank-project\flutter-seggro\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
+64            android:name="com.google.firebase.components.ComponentDiscoveryService"
+64-->[:firebase_storage] D:\Mayank-project\flutter-seggro\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
+65            android:exported="false" >
+65-->[com.google.android.gms:play-services-measurement-api:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\e7a47fe6ab9e3dfc00bca59c6b021202\play-services-measurement-api-17.2.0\AndroidManifest.xml:29:13-37
+66            <meta-data
+66-->[:firebase_storage] D:\Mayank-project\flutter-seggro\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+67                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+67-->[:firebase_storage] D:\Mayank-project\flutter-seggro\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-126
+68                android:value="com.google.firebase.components.ComponentRegistrar" />
+68-->[:firebase_storage] D:\Mayank-project\flutter-seggro\build\firebase_storage\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+69            <meta-data
+69-->[:firebase_core] D:\Mayank-project\flutter-seggro\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
+70                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar"
+70-->[:firebase_core] D:\Mayank-project\flutter-seggro\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-123
+71                android:value="com.google.firebase.components.ComponentRegistrar" />
+71-->[:firebase_core] D:\Mayank-project\flutter-seggro\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
+72            <meta-data
+72-->[com.google.android.gms:play-services-measurement-api:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\e7a47fe6ab9e3dfc00bca59c6b021202\play-services-measurement-api-17.2.0\AndroidManifest.xml:30:13-32:85
+73                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+73-->[com.google.android.gms:play-services-measurement-api:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\e7a47fe6ab9e3dfc00bca59c6b021202\play-services-measurement-api-17.2.0\AndroidManifest.xml:31:17-139
+74                android:value="com.google.firebase.components.ComponentRegistrar" />
+74-->[com.google.android.gms:play-services-measurement-api:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\e7a47fe6ab9e3dfc00bca59c6b021202\play-services-measurement-api-17.2.0\AndroidManifest.xml:32:17-82
+75            <meta-data
+75-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:32:13-34:85
+76                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+76-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:33:17-96
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:34:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-storage:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\03bcedd9b9d37c91f4c756b6d7e85abc\jetified-firebase-storage-17.0.0\AndroidManifest.xml:31:13-33:85
+79                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+79-->[com.google.firebase:firebase-storage:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\03bcedd9b9d37c91f4c756b6d7e85abc\jetified-firebase-storage-17.0.0\AndroidManifest.xml:32:17-107
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-storage:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\03bcedd9b9d37c91f4c756b6d7e85abc\jetified-firebase-storage-17.0.0\AndroidManifest.xml:33:17-82
+81        </service>
+82
+83        <provider
+83-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+84            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+84-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+85            android:authorities="com.seggro.flutterapp.flutter.image_provider"
+85-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+86            android:exported="false"
+86-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+87            android:grantUriPermissions="true" >
+87-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+88            <meta-data
+88-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+89                android:name="android.support.FILE_PROVIDER_PATHS"
+89-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+90                android:resource="@xml/flutter_image_picker_file_paths" />
+90-->[:image_picker] D:\Mayank-project\flutter-seggro\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+91        </provider>
+92
+93        <receiver
+93-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:29:9-33:20
+94            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+94-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:30:13-85
+95            android:enabled="true"
+95-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:31:13-35
+96            android:exported="false" >
+96-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:32:13-37
+97        </receiver>
+98        <receiver
+98-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:34:9-42:20
+99            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+99-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:35:13-100
+100            android:enabled="true"
+100-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:36:13-35
+101            android:exported="true"
+101-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:37:13-36
+102            android:permission="android.permission.INSTALL_PACKAGES" >
+102-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:38:13-69
+103            <intent-filter>
+103-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:39:13-41:29
+104                <action android:name="com.android.vending.INSTALL_REFERRER" />
+104-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:40:17-79
+104-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:40:25-76
+105            </intent-filter>
+106        </receiver>
+107
+108        <service
+108-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:44:9-47:40
+109            android:name="com.google.android.gms.measurement.AppMeasurementService"
+109-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:45:13-84
+110            android:enabled="true"
+110-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:46:13-35
+111            android:exported="false" />
+111-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:47:13-37
+112        <service
+112-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:48:9-52:72
+113            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+113-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:49:13-87
+114            android:enabled="true"
+114-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:50:13-35
+115            android:exported="false"
+115-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:51:13-37
+116            android:permission="android.permission.BIND_JOB_SERVICE" />
+116-->[com.google.android.gms:play-services-measurement:17.2.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\a2a37af89ff6b886094f25d7535393e0\play-services-measurement-17.2.0\AndroidManifest.xml:52:13-69
+117
+118        <receiver
+118-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:37:9-44:20
+119            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+119-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:38:13-78
+120            android:exported="true"
+120-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:39:13-36
+121            android:permission="com.google.android.c2dm.permission.SEND" >
+121-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:40:13-73
+122            <intent-filter>
+122-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:41:13-43:29
+123                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+123-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:42:17-81
+123-->[com.google.firebase:firebase-iid:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\333a4b14f4a36b22a5b8879ae448e614\firebase-iid-19.0.0\AndroidManifest.xml:42:25-78
+124            </intent-filter>
+125        </receiver>
+126
+127        <provider
+127-->[com.google.firebase:firebase-common:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f47d93387ab382f8a82b6bd47a96f57b\firebase-common-19.0.0\AndroidManifest.xml:12:9-16:39
+128            android:name="com.google.firebase.provider.FirebaseInitProvider"
+128-->[com.google.firebase:firebase-common:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f47d93387ab382f8a82b6bd47a96f57b\firebase-common-19.0.0\AndroidManifest.xml:13:13-77
+129            android:authorities="com.seggro.flutterapp.firebaseinitprovider"
+129-->[com.google.firebase:firebase-common:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f47d93387ab382f8a82b6bd47a96f57b\firebase-common-19.0.0\AndroidManifest.xml:14:13-72
+130            android:exported="false"
+130-->[com.google.firebase:firebase-common:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f47d93387ab382f8a82b6bd47a96f57b\firebase-common-19.0.0\AndroidManifest.xml:15:13-37
+131            android:initOrder="100" />
+131-->[com.google.firebase:firebase-common:19.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\f47d93387ab382f8a82b6bd47a96f57b\firebase-common-19.0.0\AndroidManifest.xml:16:13-36
+132
+133        <activity
+133-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\4fd23f1c0a576ef4883220502e5e1d72\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+134            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+134-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\4fd23f1c0a576ef4883220502e5e1d72\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+135            android:exported="false"
+135-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\4fd23f1c0a576ef4883220502e5e1d72\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+136            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+136-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\4fd23f1c0a576ef4883220502e5e1d72\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+137
+138        <meta-data
+138-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\0b936340f57bc435ab436eb94dcd15dc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+139            android:name="com.google.android.gms.version"
+139-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\0b936340f57bc435ab436eb94dcd15dc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+140            android:value="@integer/google_play_services_version" />
+140-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Bangalore\.gradle\caches\transforms-2\files-2.1\0b936340f57bc435ab436eb94dcd15dc\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+141    </application>
+142
+143</manifest>

@@ -1,6 +1,7 @@
 class weatherService {
-  String temperature = "";
-  String weather = "";
+  static double  temperature;
+  static  String weather;
+  static String date ;
 
   getWeather(){
 

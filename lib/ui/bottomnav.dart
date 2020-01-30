@@ -20,7 +20,9 @@ class _BottomNav extends State<BottomNav> {
   int selectedIndex = 0;
   Widget _buildItem(NavigationItem item, bool isSelected) {
     return AnimatedContainer(
-        duration: Duration(milliseconds: 200),
+      
+      
+        duration: Duration(milliseconds: 100),
         width: isSelected ? 120 : 30,
         // height: double.maxFinite,
         height: 40,
@@ -70,7 +72,7 @@ class _BottomNav extends State<BottomNav> {
         Text('Home')),
     NavigationItem(
         Icon(
-          Icons.smoking_rooms,
+          Icons.history,
           size: 20,
         ),
         Text('Previous')),
@@ -85,10 +87,26 @@ class _BottomNav extends State<BottomNav> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // decoration: BoxDecoration(
+      //         image: DecorationImage(
+      //           image: AssetImage("assets/image2.png"),
+      //           fit: BoxFit.fitHeight,
+      //         ),
+      //       ),
       height: 60,
       padding: EdgeInsets.only(left: 35, right: 35),
       decoration: BoxDecoration(
-          boxShadow: [BoxShadow(color: Colors.white, blurRadius: 4)]),
+          boxShadow: [BoxShadow(color: Colors.white, blurRadius: 4)],
+          border: Border(
+      top: BorderSide( //                    <--- top side
+        color: Colors.black45,
+        width: 0.5,
+      ),
+    ),
+          
+          
+          
+          ),
       // color: Colors.yellow,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

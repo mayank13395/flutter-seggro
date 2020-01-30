@@ -1,6 +1,11 @@
 # This is a generated file; do not edit or check into version control.
+firebase_core=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core-0.4.3+1\\
+firebase_core_web=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_core_web-0.1.1+1\\
+firebase_storage=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\firebase_storage-3.1.1\\
+flutter_statusbar_text_color=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_statusbar_text_color-0.1.2\\
 flutter_statusbarcolor=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\flutter_statusbarcolor-0.2.3\\
 image_picker=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\image_picker-0.6.2+3\\
+location=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\location-2.3.5\\
 path_provider=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\path_provider-1.5.1\\
 permission_handler=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\permission_handler-4.0.0\\
 shared_preferences=C:\\src\\flutter\\.pub-cache\\hosted\\pub.dartlang.org\\shared_preferences-0.5.6\\

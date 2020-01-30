@@ -183,6 +183,41 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.2"
+  firebase:
+    dependency: transitive
+    description:
+      name: firebase
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "7.1.0"
+  firebase_core:
+    dependency: transitive
+    description:
+      name: firebase_core
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.3+1"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.1+1"
+  firebase_storage:
+    dependency: "direct main"
+    description:
+      name: firebase_storage
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.1"
   fixnum:
     dependency: transitive
     description:
@@ -235,6 +270,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
+  flutter_statusbar_text_color:
+    dependency: "direct main"
+    description:
+      name: flutter_statusbar_text_color
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.2"
   flutter_statusbarcolor:
     dependency: "direct main"
     description:
@@ -382,6 +424,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.21+1"
+  loading_animations:
+    dependency: "direct main"
+    description:
+      name: loading_animations
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.0"
+  location:
+    dependency: transitive
+    description:
+      name: location
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.3.5"
   logging:
     dependency: transitive
     description:
@@ -501,6 +557,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.0"
+  positioned_tap_detector:
+    dependency: "direct main"
+    description:
+      name: positioned_tap_detector
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.3"
   provider:
     dependency: "direct main"
     description:
@@ -681,6 +744,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.7+13"
+  weather:
+    dependency: "direct main"
+    description:
+      name: weather
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.9.5"
   web_socket_channel:
     dependency: transitive
     description:

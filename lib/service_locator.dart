@@ -10,7 +10,7 @@ GetIt locator = GetIt.I;
 Future setupLocator() async{
   var instance = await LocalStrorageService.getInstance();
   locator.registerSingleton<LocalStrorageService>(instance);
-  locator.registerSingleton(imageService());
+  locator.registerSingleton(ImageService());
   locator.registerFactory<LoginService>(() => LoginService());
 }
 

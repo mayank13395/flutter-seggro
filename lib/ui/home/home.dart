@@ -2,6 +2,7 @@ import 'package:boilerplate/data/sharedpref/constants/preferences.dart';
 import 'package:boilerplate/routes.dart';
 import 'package:boilerplate/stores/post/post_store.dart';
 import 'package:boilerplate/ui/homebody.dart';
+import 'package:boilerplate/ui/previous_history.dart';
 import 'package:boilerplate/widgets/empty_app_bar_widget.dart';
 import 'package:boilerplate/widgets/progress_indicator_widget.dart';
 import 'package:flushbar/flushbar.dart';
@@ -10,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../accountsetting.dart';
 import '../bottomnav.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,12 +27,19 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeBody(
       myColor: Colors.grey,
     ),
-    HomeBody(
-      myColor: Colors.indigo,
-    ),
-    HomeBody(
-      myColor: Colors.orange,
-    ),
+
+    PreviosHistory(),
+
+
+    AccountSetting()
+
+
+    // HomeBody(
+    //   myColor: Colors.indigo,
+    // ),
+    // HomeBody(
+    //   myColor: Colors.orange,
+    // ),
   ];
 
   int selectedIndex =0;
@@ -61,9 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
         callback: (val) => setState(() => {
             print("parent"),
             selectedIndex = val,
-
-          print(val)
-        
+            print(_children[1]),
+            print(val)
         }
         ),
       ),
