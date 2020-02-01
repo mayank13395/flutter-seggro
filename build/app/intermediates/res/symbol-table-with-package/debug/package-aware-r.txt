@@ -1,4 +1,4 @@
-com.seggro.flutterapp
+com.seggro.app
 attr alpha
 attr buttonSize
 attr circleCrop

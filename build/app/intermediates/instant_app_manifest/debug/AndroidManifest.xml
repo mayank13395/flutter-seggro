@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.seggro.flutterapp"
+    package="com.seggro.app"
     android:targetSandboxVersion="2"
     android:versionCode="1"
     android:versionName="1.0.0" >
@@ -35,7 +35,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Boilerplate Project" >
+        android:label="Seggro-flutter" >
         <activity
             android:name="com.seggro.app.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
@@ -83,7 +83,7 @@
 
         <provider
             android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-            android:authorities="com.seggro.flutterapp.flutter.image_provider"
+            android:authorities="com.seggro.app.flutter.image_provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -127,7 +127,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.seggro.flutterapp.firebaseinitprovider"
+            android:authorities="com.seggro.app.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

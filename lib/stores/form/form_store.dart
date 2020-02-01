@@ -75,6 +75,11 @@ abstract class _FormStore with Store {
   }
 
   @action
+  String getPassword() {
+     return password;
+  }
+
+  @action
   void setConfirmPassword(String value) {
     confirmPassword = value;
   }

@@ -1,3 +1,5 @@
+import 'package:boilerplate/providers/AppState.dart';
+import 'package:boilerplate/providers/Auth.dart';
 import 'package:boilerplate/routes.dart';
 import 'package:boilerplate/services/ask_permission.dart';
 import 'package:boilerplate/services/image_service.dart';
@@ -41,19 +43,29 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
       // FlutterStatusbarcolor.setStatusBarColor(Colors.white);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: Strings.appName,
-      theme: themeData,
-      routes: Routes.routes,
-      home: SplashScreen()
+    return MultiProvider(
+      providers: [
+
+         ChangeNotifierProvider(create: (_) => Auth()),
+        // ChangeNotifierProvider.value(
+        //   value: AppState(),
+        // )
+      ],
+      child :  MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: Strings.appName,
+          theme: themeData,
+          routes: Routes.routes,
+          home:  SplashScreen()
       
+    
       // ChangeNotifierProvider<ImageService>(
       //     create: (_) => ImageService(),
       //     child:   HomeScreen(),
       //   ),
     
       // home: AskForPermission(),
-    );
+    )
+     );
   }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">1098130963983-ld1jsplv90njd8hk16aoavogo62hcjfa.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://flutter-seggro.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">1098130963983</string>
-    <string name="google_api_key" translatable="false">AIzaSyD8dfOo2uEytf_cYZpi-45K_Thx1OKnoS4</string>
-    <string name="google_app_id" translatable="false">1:1098130963983:android:c9bb0077e58f85a3932d7a</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD8dfOo2uEytf_cYZpi-45K_Thx1OKnoS4</string>
-    <string name="google_storage_bucket" translatable="false">flutter-seggro.appspot.com</string>
-    <string name="project_id" translatable="false">flutter-seggro</string>
+    <string name="default_web_client_id" translatable="false">8110374548-ksm33l926q5om7a9q847180grfpgp4dt.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://seggro-cbb6e.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">8110374548</string>
+    <string name="google_api_key" translatable="false">AIzaSyDIkZdfVV49p7eG91E1jAZksnZbVvFf8uo</string>
+    <string name="google_app_id" translatable="false">1:8110374548:android:75eb47e4dac6893ea13e81</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDIkZdfVV49p7eG91E1jAZksnZbVvFf8uo</string>
+    <string name="google_storage_bucket" translatable="false">seggro-cbb6e.appspot.com</string>
+    <string name="project_id" translatable="false">seggro-cbb6e</string>
 </resources>
