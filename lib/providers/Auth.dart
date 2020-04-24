@@ -1,33 +1,86 @@
+import 'dart:async';
+import 'package:boilerplate/models/post/http_exception.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-import 'dart:developer';
-import 'dart:ffi';
+abstract class BaseAuth {
+  Future<String> signIn(String email, String password);
 
-import 'package:f_logs/f_logs.dart';
-import 'package:flutter/cupertino.dart';
-import 'dart:convert' as convert;
-import 'package:http/http.dart' as http;
+  Future<String> signUp(String email, String password);
 
-class Auth with ChangeNotifier {
+  Future<FirebaseUser> getCurrentUser();
 
-   String _token;
-   DateTime _expiryDate;
-   String _userid;
+  Future<void> sendEmailVerification();
 
+  Future<void> signOut();
 
-  Future<void> signUp(String email, String password) async{
-    print(email);
-    print(password);
+  Future<bool> isEmailVerified();
+}
 
-       const _url = "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCGABxF8nz1YO72ti2gPoveykczC1uVi9A";
+class Auth implements BaseAuth {
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
-       final response = await http.post(_url, body: 
-       convert.json.encode({'email': email, 'password': password,'returnSecureToken':true}));   
-       print("fffffffffffffffffffffffffffffffff");
-       print(convert.json.decode(response.body));
+  Future<String> signIn(String email, String password) async {
 
-       
-     
-   }
+   try {
+      AuthResult result = await _firebaseAuth.signInWithEmailAndPassword(
+        email: email, password: password);
+    FirebaseUser user = result.user;
+    print("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+     print("resultt on login...................$result");
+    // return user.uid;
+    } 
+      catch (e) {
+        print("catch error in login................$e.message");
+        // throw e;
+           throw MyHttpException(e.message);
+    //       switch (e.message) {
+    //   case 'There is no user record corresponding to this identifier. The user may have been deleted.':
+    //     errorType = authProblems.UserNotFound;
+    //     break;
+    //   case 'The password is invalid or the user does not have a password.':
+    //     errorType = authProblems.PasswordNotValid;
+    //     break;
+    //   case 'A network error (such as timeout, interrupted connection or unreachable host) has occurred.':
+    //     errorType = authProblems.NetworkError;
+    //     break;
+    //   // ...
+    //   default:
+    //     print('Case ${e.message} is not yet implemented');
+    // }
+   
+      
+    }
+  }
 
-  
+  Future<String> signUp(String email, String password) async {
+   try { AuthResult result = await _firebaseAuth.createUserWithEmailAndPassword(
+        email: email, password: password
+        );
+    FirebaseUser user = result.user;
+    return user.uid;
+    } catch(e) {
+ print("catch error in login................$e.message");
+        // throw e;
+           throw MyHttpException(e.message);
+    }
+  }
+
+  Future<FirebaseUser> getCurrentUser() async {
+    FirebaseUser user = await _firebaseAuth.currentUser();
+    return user;
+  }
+
+  Future<void> signOut() async {
+    return _firebaseAuth.signOut();
+  }
+
+  Future<void> sendEmailVerification() async {
+    FirebaseUser user = await _firebaseAuth.currentUser();
+    user.sendEmailVerification();
+  }
+
+  Future<bool> isEmailVerified() async {
+    FirebaseUser user = await _firebaseAuth.currentUser();
+    return user.isEmailVerified;
+  }
 }

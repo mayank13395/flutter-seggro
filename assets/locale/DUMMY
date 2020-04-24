@@ -1,0 +1,36 @@
+// {
+//     "title_select_language" : "Select Your Language",
+//     "language_terms_and_condition" : "I read and accept the terms of use and the privacy policy",
+//     "btn_accept" : "Accept",
+//     "title_login" : "Login",
+//     "title_signup" : "Signup",
+//     "email_input_hint" : "Enter user email",
+//     "password_input_hint" : "Enter Password",
+//     "confirm_password_input_hint" : "Confirm Password",
+//     "btn_signin" : "Sign In",
+//     "btn_signup" : "Sign Up",
+//     "dont_have_account" : "Don't have a account?",
+//     "txt_signup" : "SignUp",
+//     "txt_login" : "SignIn"
+    
+
+// }
+
+
+{
+    "title_select_language": "अपनी भाषा चुनें",
+    "language_terms_and_condition": "मैं उपयोग और गोपनीयता नीति पढ़ता और स्वीकार करता हूं",
+    "btn_accept": "स्वीकार करें",
+    "title_login": "लॉगिन",
+    "title_signup": "साइनअप",
+    "email_input_hint": "उपयोगकर्ता ईमेल दर्ज करें",
+    "password_input_hint": "पासवर्ड दर्ज करें",
+    "confirm_password_input_hint": "पासवर्ड की पुष्टि करें",
+    "btn_signin": "साइन इन करें",
+    "btn_signup": "साइन अप",
+    "NOT_have_account": "क्या आपके पास खाता नहीं है?",
+    "txt_signup": "साइनअप",
+    "txt_login": "साइन इन"
+    
+
+}

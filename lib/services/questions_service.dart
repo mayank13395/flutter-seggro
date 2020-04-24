@@ -3,4 +3,5 @@ class ImageQuestions {
   static var isSpot  = 'yes';
   static var tempdisease;
   static var tempDiseaseTocompare;
+  static bool isSelected = false;
 }

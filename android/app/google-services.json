@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "8110374548",
-    "firebase_url": "https://seggro-cbb6e.firebaseio.com",
-    "project_id": "seggro-cbb6e",
-    "storage_bucket": "seggro-cbb6e.appspot.com"
+    "project_number": "1052059258709",
+    "firebase_url": "https://seggroapp.firebaseio.com",
+    "project_id": "seggroapp",
+    "storage_bucket": "seggroapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:8110374548:android:75eb47e4dac6893ea13e81",
+        "mobilesdk_app_id": "1:1052059258709:android:c35616c3751e61fb2229dc",
         "android_client_info": {
           "package_name": "com.seggro.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "8110374548-ksm33l926q5om7a9q847180grfpgp4dt.apps.googleusercontent.com",
+          "client_id": "1052059258709-kbpdb4upfiaqi0qnr3l35jctqkis5hfa.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDIkZdfVV49p7eG91E1jAZksnZbVvFf8uo"
+          "current_key": "AIzaSyB0dl0ta9nVeHbJ_89s5gWebjR3rTxW24I"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "8110374548-ksm33l926q5om7a9q847180grfpgp4dt.apps.googleusercontent.com",
+              "client_id": "1052059258709-kbpdb4upfiaqi0qnr3l35jctqkis5hfa.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

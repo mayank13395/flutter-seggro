@@ -103,14 +103,14 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="default_web_client_id" translatable="false">8110374548-ksm33l926q5om7a9q847180grfpgp4dt.apps.googleusercontent.com</string>
-    <string name="firebase_database_url" translatable="false">https://seggro-cbb6e.firebaseio.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">8110374548</string>
-    <string name="google_api_key" translatable="false">AIzaSyDIkZdfVV49p7eG91E1jAZksnZbVvFf8uo</string>
-    <string name="google_app_id" translatable="false">1:8110374548:android:75eb47e4dac6893ea13e81</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDIkZdfVV49p7eG91E1jAZksnZbVvFf8uo</string>
-    <string name="google_storage_bucket" translatable="false">seggro-cbb6e.appspot.com</string>
-    <string name="project_id" translatable="false">seggro-cbb6e</string>
+    <string name="default_web_client_id" translatable="false">1052059258709-kbpdb4upfiaqi0qnr3l35jctqkis5hfa.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://seggroapp.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1052059258709</string>
+    <string name="google_api_key" translatable="false">AIzaSyB0dl0ta9nVeHbJ_89s5gWebjR3rTxW24I</string>
+    <string name="google_app_id" translatable="false">1:1052059258709:android:c35616c3751e61fb2229dc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB0dl0ta9nVeHbJ_89s5gWebjR3rTxW24I</string>
+    <string name="google_storage_bucket" translatable="false">seggroapp.appspot.com</string>
+    <string name="project_id" translatable="false">seggroapp</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when
